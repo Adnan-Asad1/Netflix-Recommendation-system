@@ -65,57 +65,6 @@ Prepare your dataset:
 
 ![logo](https://github.com/MrBriit/Netflix-Recommender-System-and-Deployment/blob/main/net%20screenshot.png?raw=true)
 
-
-## 🚀 About Me
-I'm a Full Stack Data Scientist
-
-
-# Hi, I'm Hamza Meer! 👋
-
-
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.linkedin.com/in/hamza-meer)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hamza-meer)
-
-
-
-## 🛠 Skills
-- Python  
-
-- Statistics 
-
-- SQL 
-- Machine Learning 
-- Deep Learning
-- Artificial Intelligence
-- Data Science
-- Product Management
-
-
-## Tech Stack
-
-
-
-
-
-![Logo](https://businesstoys.in/assets/programs/full-stack-data-science-professional-program/tools.png)
-
-
-
-## Future Plans 
-⚡️ Looking forward to help drive innovations into your company as a Data Scientist
-
-⚡️ Looking forward to mentor students and data science enthusiasts
-
-⚡️ Looking forward to offer more than I take and leave the place better than i found
-
-
-
-## Badges
-
-Add badges from somewhere like: [shields.io](https://shields.io/)
-
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
