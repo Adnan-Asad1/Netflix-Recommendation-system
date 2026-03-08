@@ -6,9 +6,13 @@ import pickle
 import requests
 from secret_key import key
 
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # model loading
-model = pickle.load(open(r'model\nlp_model.pkl','rb'))
-vectorizer = pickle.load(open(r'model\tranform.pkl','rb'))
+model = pickle.load(open(os.path.join(BASE_DIR, 'model', 'nlp_model.pkl'), 'rb'))
+vectorizer = pickle.load(open(os.path.join(BASE_DIR, 'model', 'tranform.pkl'), 'rb'))
 
 
 # fetching movie reviews
@@ -72,7 +76,7 @@ def fetch_tmdb_reviews(imdb_id):
 
 def create_similarity():
     # loading the data
-    data = pd.read_csv(r'Datasets\data_2022_2023\last2_data.csv')
+    data = pd.read_csv(os.path.join(BASE_DIR, 'Datasets', 'data_2022_2023', 'last2_data.csv'))
     # creating count vectorizer
     # It converts a collection of text documents into a matrix of token counts, where each entry represents the frequency of words in the text.
     cv = CountVectorizer()
@@ -128,7 +132,7 @@ def convert_to_list(value):
 
 # to get suggestions for autocomplete
 def get_suggestions():
-    data = pd.read_csv(r'Datasets\data_2022_2023\last2_data.csv')
+    data = pd.read_csv(os.path.join(BASE_DIR, 'Datasets', 'data_2022_2023', 'last2_data.csv'))
     return list(data['movie_title'].str.capitalize())
 
 #  Flask Server
