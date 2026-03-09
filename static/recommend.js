@@ -21,7 +21,7 @@ $(function () {
     }
     else {
       console.log("Step 2: Showing loader.");
-      $("#loader").show();
+      $("#loader").css('display', 'flex');
       await load_details(my_api_key, title);
     }
   });
@@ -30,7 +30,7 @@ $(function () {
 // will be invoked when clicking on the recommended movies
 async function recommendcard(e) {
   console.log("Step 1 (Card): Recommendation card clicked.");
-  $("#loader").show();
+  $("#loader").css('display', 'flex');
   var my_api_key = '0baaa8c7b33b5a989872a3febf289ed3';
   var title = e.getAttribute('title');
   await load_details(my_api_key, title);
