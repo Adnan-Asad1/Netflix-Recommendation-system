@@ -23,10 +23,6 @@
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}?v=5">
-  <script type="text/javascript">
-    var suggestionsElement = document.getElementById('autoComplete');
-    var films = JSON.parse(suggestionsElement.getAttribute('data-suggestions'));
-  </script>
 
 </head>
 
@@ -53,7 +49,7 @@
       <input type="text" name="movie" class="movie form-control" id="autoComplete" autocomplete="off"
         placeholder="Enter the Movie Name/title"
         style="background-color: #ffffff;border-color:#ffffff;width: 60%;color: #181818" required="required"
-        data-suggestions="{{ suggestions | tojson | safe }}" />
+        data-suggestions='{{ suggestions | tojson | safe }}' />
       <br>
     </div>
 
@@ -79,7 +75,12 @@
     </center>
   </div>
 
-  <div class="footer">Made with<span style="font-size:150%;color:red;"> &hearts; </span>by Hamza Meer</div>
+  <div class="footer">Made with<span style="font-size:150%;color:red;"> &hearts; </span>by Adnan Asad</div>
+
+  <script type="text/javascript">
+    var suggestionsElement = document.getElementById('autoComplete');
+    var films = JSON.parse(suggestionsElement.getAttribute('data-suggestions'));
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='autocomplete.js') }}?v=5"></script>
