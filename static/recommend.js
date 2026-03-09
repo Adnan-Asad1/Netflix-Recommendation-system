@@ -19,6 +19,7 @@ $(function () {
       $('.fail').css('display', 'block');
     }
     else {
+      $("#loader").fadeIn();
       await load_details(my_api_key, title);
     }
   });
@@ -26,6 +27,7 @@ $(function () {
 
 // will be invoked when clicking on the recommended movies
 async function recommendcard(e) {
+  $("#loader").fadeIn();
   var my_api_key = '0baaa8c7b33b5a989872a3febf289ed3';
   var title = e.getAttribute('title');
   await load_details(my_api_key, title);
@@ -44,7 +46,6 @@ async function load_details(my_api_key, title) {
         $("#loader").delay(500).fadeOut();
       }
       else {
-        $("#loader").fadeIn();
         $('.fail').css('display', 'none');
         $('.results').delay(1000).css('display', 'block');
         var movie_id = movie.results[0].id;
