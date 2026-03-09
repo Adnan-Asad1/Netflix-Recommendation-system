@@ -8,14 +8,14 @@
 .movie-content {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content:space-around;
+	justify-content: space-around;
 }
 
-.movie-content > div {
-    margin:20px;
+.movie-content>div {
+	margin: 20px;
 }
 
-.btn-block{
+.btn-block {
 	width: 15%;
 	text-align: center;
 	margin-left: auto;
@@ -35,44 +35,45 @@
 
 .footer {
 	color: #e4e0e0;
-	text-align:right;
+	text-align: right;
 	position: fixed;
- 	bottom: 20px;
- 	right: 20px;
- 	width: 100%;
+	bottom: 20px;
+	right: 20px;
+	width: 100%;
 }
 
 h1 {
-    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #e50914;
-    font-weight: bold;
-    margin-top: 30px;
-    text-shadow: #000000 0px 0px 13px;
- }
+	font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #e50914;
+	font-weight: bold;
+	margin-top: 30px;
+	text-shadow: #000000 0px 0px 13px;
+}
 
 .github-corner:hover .octo-arm {
-  	animation: octocat-wave 560ms ease-in-out;
+	animation: octocat-wave 560ms ease-in-out;
 }
 
 @keyframes octocat-wave {
-  0%,
-  100% {
-    transform: rotate(0)
-  }
 
-  20%,
-  60% {
-    transform: rotate(-25deg)
-  }
+	0%,
+	100% {
+		transform: rotate(0)
+	}
 
-  40%,
-  80% {
-    transform: rotate(10deg)
-  }
+	20%,
+	60% {
+		transform: rotate(-25deg)
+	}
+
+	40%,
+	80% {
+		transform: rotate(10deg)
+	}
 }
 
 #autoComplete {
-  background-position: 98% ;
+	background-position: 98%;
 }
 
 #name {
@@ -81,45 +82,54 @@ h1 {
 }
 
 h6 {
-    margin-bottom: 20px;  
+	margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 650px) {
-    #mcontent {
-      display: block;
-    }
-    .poster-lg {
-      display: none;
-    }
-    #details {
+	#mcontent {
+		display: block;
+	}
+
+	.poster-lg {
+		display: none;
+	}
+
+	#details {
 		margin-left: 30px;
 	}
-    #loader {
+
+	#loader {
 		display: none;
 		position: fixed;
 		z-index: 100;
 		left: 0;
-		top:0;
+		top: 0;
 		width: 100%;
 		height: 100%;
-		background-image: url("loader.gif");
-		background-size: 40%;
-		background-position: 50% 50%;
-		background-color: rgba(255, 255, 255, 1);
-		background-repeat: no-repeat;
-		-webkit-transition: background-image 0.2s ease-in-out;
-		transition: background-image 0.2s ease-in-out;
+		background-color: rgba(0, 0, 0, 0.9);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.loader-text {
+		margin-top: 20px;
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: #e50914;
 	}
 
 	#loader-text {
 		vertical-align: middle;
-		color:white;
+		color: white;
 	}
 
 	#autoComplete {
-	  background-position: 97% ;
+		background-position: 97%;
 	}
-	
+
 	svg[data-toggle=tooltip] {
 		width: 50px;
 		height: 50px;
@@ -127,9 +137,10 @@ h6 {
 }
 
 @media only screen and (max-width: 991px) {
-	.modal-body{
+	.modal-body {
 		display: block;
 	}
+
 	.profile-pic {
 		margin-left: auto;
 		margin-right: auto;
@@ -137,6 +148,7 @@ h6 {
 		margin-bottom: 20px;
 	}
 }
+
 @media only screen and (min-width: 992px) {
 	.modal-body {
 		display: flex;
@@ -144,9 +156,9 @@ h6 {
 }
 
 @media only screen and (min-width: 651px) {
-  .poster-sm {
-    display: none;
-   }
+	.poster-sm {
+		display: none;
+	}
 
 	#mcontent {
 		display: flex;
@@ -158,29 +170,35 @@ h6 {
 		position: fixed;
 		z-index: 100;
 		left: 0;
-		top:0;
+		top: 0;
 		width: 100%;
 		height: 100%;
-		background-image: url("loader.gif");
-		background-size: 20%;
-		background-position: 50% 50%;
-		background-color: rgba(255, 255, 255, 1);
-		background-repeat: no-repeat;
-		-webkit-transition: background-image 0.2s ease-in-out;
-		transition: background-image 0.2s ease-in-out;
+		background-color: rgba(0, 0, 0, 0.9);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.loader-text {
+		margin-top: 20px;
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: #e50914;
 	}
 
 	#loader-text {
 		vertical-align: middle;
-		color:white;
+		color: white;
 	}
 
 }
 
-.poster{
-    -webkit-box-shadow: 0px 1px 15px 4px rgba(250,250,250,1);
-    -moz-box-shadow: 0px 1px 15px 4px rgba(250,250,250,1);
-    box-shadow: 0px 1px 15px 4px rgba(250,250,250,1);
+.poster {
+	-webkit-box-shadow: 0px 1px 15px 4px rgba(250, 250, 250, 1);
+	-moz-box-shadow: 0px 1px 15px 4px rgba(250, 250, 250, 1);
+	box-shadow: 0px 1px 15px 4px rgba(250, 250, 250, 1);
 }
 
 .card:hover {
@@ -188,13 +206,13 @@ h6 {
 }
 
 .castcard:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .cast-img {
 	filter: brightness(100%);
 	-moz-transition: all 0.75s ease;
-    -webkit-transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
 	transition: all 0.75s ease;
 }
 
@@ -202,8 +220,8 @@ h6 {
 .cast-img:hover {
 	filter: brightness(50%);
 	-moz-transition: all 0.75s ease;
-    -webkit-transition: all 0.75s ease;
-    transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	transition: all 0.75s ease;
 }
 
 .fig {
@@ -218,16 +236,16 @@ h6 {
 	left: 0px;
 	opacity: 0;
 	-moz-transition: all 0.75s ease;
-    -webkit-transition: all 0.75s ease;
-    transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	transition: all 0.75s ease;
 }
 
 .fig:hover {
 	opacity: 1;
-	backdrop-filter:br;
+	backdrop-filter: br;
 	-moz-transition: all 0.75s ease;
-    -webkit-transition: all 0.75s ease;
-    transition: all 0.75s ease;
+	-webkit-transition: all 0.75s ease;
+	transition: all 0.75s ease;
 }
 
 .card-btn {
@@ -239,9 +257,9 @@ h6 {
 }
 
 .table td {
-    border-color: white;
-    border-style:solid; 
-    border-width:1px;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
 }
 
 .fail {

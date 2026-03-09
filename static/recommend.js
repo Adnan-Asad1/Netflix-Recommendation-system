@@ -12,6 +12,7 @@ $(function () {
   source.addEventListener('input', inputHandler);
 
   $('.movie-button').on('click', async function () {
+    console.log("Step 1: Search button clicked.");
     var my_api_key = 'cf1e5b9d8cf31e19913dd6bc256abb2a';
     var title = $('.movie').val();
     if (title == "") {
@@ -19,7 +20,8 @@ $(function () {
       $('.fail').css('display', 'block');
     }
     else {
-      $("#loader").fadeIn();
+      console.log("Step 2: Showing loader.");
+      $("#loader").show();
       await load_details(my_api_key, title);
     }
   });
@@ -27,7 +29,8 @@ $(function () {
 
 // will be invoked when clicking on the recommended movies
 async function recommendcard(e) {
-  $("#loader").fadeIn();
+  console.log("Step 1 (Card): Recommendation card clicked.");
+  $("#loader").show();
   var my_api_key = '0baaa8c7b33b5a989872a3febf289ed3';
   var title = e.getAttribute('title');
   await load_details(my_api_key, title);
@@ -35,11 +38,13 @@ async function recommendcard(e) {
 
 // get the basic details of the movie from the API (based on the name of the movie)
 async function load_details(my_api_key, title) {
+  console.log("Step 3: Starting TMDB API search for: " + title);
   $.ajax({
     type: 'GET',
     url: 'https://api.themoviedb.org/3/search/movie?api_key=' + my_api_key + '&query=' + title,
 
     success: async function (movie) {
+      console.log("Step 4: TMDB search successful.");
       if (movie.results.length < 1) {
         $('.fail').css('display', 'block');
         $('.results').css('display', 'none');
@@ -62,11 +67,13 @@ async function load_details(my_api_key, title) {
 
 // passing the movie name to get the similar movies from python's flask
 async function movie_recs(movie_title, movie_id, my_api_key) {
+  console.log("Step 5: Starting Similarity search for: " + movie_title);
   $.ajax({
     type: 'POST',
     url: "/similarity",
     data: { 'name': movie_title },
     success: async function (recs) {
+      console.log("Step 6: Similarity search successful.");
       if (recs === "Sorry! The movie you requested is not in our database. Please check the spelling or try with some other movies") {
         $('.fail').css('display', 'block');
         $('.results').css('display', 'none');
@@ -161,9 +168,11 @@ async function show_details(movie_details, arr, movie_title, my_api_key, movie_i
     url: "/recommend",
     dataType: 'html',
     complete: function () {
+      console.log("Step 8: Recommendation process complete. Hiding loader.");
       $("#loader").delay(500).fadeOut();
     },
     success: function (response) {
+      console.log("Step 7: Rendering results to page.");
       $('.results').html(response);
       $('#autoComplete').val('');
       $(window).scrollTop(0);
